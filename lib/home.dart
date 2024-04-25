@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:appimc/imc.dart';
 import 'package:appimc/resultado.dart';
+import 'package:masked_text_field/masked_text_field.dart';
 
 class HomeIMC extends StatefulWidget {
   @override
@@ -41,10 +42,56 @@ class _HomeIMCState extends State<HomeIMC> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Calculadora de IMC"),
-        actions: [],
-      ),
-    );
+        appBar: AppBar(
+          title: Text('Calculadora de IMC'),
+          actions: [
+            IconButton(icon: Icon(Icons.refresh), onPressed: _limparCampos)
+          ],
+        ),
+        
+        // O widget SingleChildScrollView permite que o conteúdo da tela 
+        // seja rolado e impede que os demais componentes sejam cortados.
+        body: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              children: [
+                // Logotipo da Calculadora
+                Padding(
+                    padding: EdgeInsets.only(top: 10, bottom: 10),
+                    child: Icon(
+                      Icons.calculate_outlined,
+                      color: Colors.blue,
+                      size: 80.0,
+                    )),
+
+                // Campo para a Altura
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: TextField(
+                    controller: _alturaController,
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(labelText: 'Altura'),
+                  ),
+                ),
+
+                // Campo para o peso
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: TextField(
+                    controller: _pesoController,
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(labelText: 'Peso'),
+                  ),
+                ),
+
+                // Botão para efetuar o cálculo
+                ElevatedButton(
+                  onPressed: _btnCalcularIMC,
+                  child: Text('Calcular IMC'),
+                ),
+              ],
+            ),
+          ),
+        ));
   }
 }
