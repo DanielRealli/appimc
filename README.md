@@ -1,16 +1,17 @@
-# appimc
+# IMC APP
 
-A new Flutter project.
+- Aplicativo sobre a Calculadora de IMC.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+# Integrantes
 
-A few resources to get you started if this is your first Flutter project:
+- Matheus Gongo de Souza - Matrícula: 121100005
+- Daniel Realli Gaspar Loureiro - Matrícula: 122100019
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Captura de Tela do App
+- Link: 
+https://i.ibb.co/YRG315s/1.png
+https://i.ibb.co/RHR2Jkj/2.png
